@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Free Water Test | Harborline Water Charleston</title>
+  <meta name="description" content="Book a free in-home water test with Harborline Water. Charleston Lowcountry — city or well. Name, phone, email, ZIP. No softener hard-sell." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">H</span>
+        Harborline Water
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="whole-home.html">Whole-Home</a>
+        <a href="reverse-osmosis.html">RO</a>
+        <a href="softener.html">Softener</a>
+        <a href="well-water.html">Well Water</a>
+        <a href="charleston.html">Areas</a>
+        <a class="nav-cta" href="book.html">Book Free Test</a>
+      </nav>
+      <a class="header-phone" href="tel:+18435550148">(843) 555-0148</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile container" aria-label="Mobile">
+      <a href="whole-home.html">Whole-Home Filtration</a>
+      <a href="reverse-osmosis.html">Reverse Osmosis</a>
+      <a href="softener.html">Water Softener</a>
+      <a href="well-water.html">Well Water</a>
+      <a href="charleston.html">Charleston</a>
+      <a href="mount-pleasant.html">Mount Pleasant</a>
+      <a href="summerville.html">Summerville</a>
+      <a href="johns-island.html">Johns Island</a>
+      <a href="west-ashley.html">West Ashley</a>
+      <a class="nav-cta" href="book.html">Book Free Water Test</a>
+    </nav>
+  </header>
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Book</p>
+        <h1>Book a free water test</h1>
+        <p>Takes about a minute. We will follow up to schedule your in-home test — city or well.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="display:grid;gap:2.5rem;align-items:start">
+        <div style="display:grid;gap:2.5rem;align-items:start" class="split">
+          <div>
+            <div class="form-card" id="form-wrap">
+              <form id="lead-form" novalidate>
+                <!--
+                  FUTURE: GoHighLevel (GHL) webhook integration
+                  Replace the JS console.log handler in js/main.js with:
+                  fetch('YOUR_GHL_WEBHOOK_URL', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                  })
+                  Or point form action to your GHL form endpoint.
+                -->
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jordan Lee" />
+                </div>
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(843) 555-0100" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+                  </div>
+                </div>
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="zip">ZIP code</label>
+                    <input type="text" id="zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}" placeholder="29464" maxlength="5" />
+                  </div>
+                  <div class="form-group">
+                    <label for="waterSource">Water source</label>
+                    <select id="waterSource" name="waterSource" required>
+                      <option value="" disabled selected>Select…</option>
+                      <option value="city">City / municipal</option>
+                      <option value="well">Private well</option>
+                      <option value="unsure">Not sure</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="concern">Primary concern</label>
+                  <select id="concern" name="concern" required>
+                    <option value="" disabled selected>Select…</option>
+                    <option value="taste-odor">Taste / odor (chlorine or chloramine)</option>
+                    <option value="ice-coffee">Ice / coffee taste</option>
+                    <option value="skin-hair">Skin / hair feel</option>
+                    <option value="hardness-scale">Hardness / scale</option>
+                    <option value="well-iron-sulfur">Well: iron / sulfur / sediment</option>
+                    <option value="general">General — want a test</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="preferredContact">Preferred contact</label>
+                  <select id="preferredContact" name="preferredContact" required>
+                    <option value="" disabled selected>Select…</option>
+                    <option value="phone">Phone call</option>
+                    <option value="text">Text</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Anything else? <span class="hint">(optional)</span></label>
+                  <textarea id="message" name="message" placeholder="City, neighborhood, or notes about your plumbing…"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Request free water test</button>
+                <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);text-align:center">
+                  Or call <a href="tel:+18435550148">(843) 555-0148</a> · <a href="mailto:hello@harborlinewater.com">hello@harborlinewater.com</a>
+                </p>
+              </form>
+              <div class="form-success" id="form-success" role="status">
+                <div class="check" aria-hidden="true">✓</div>
+                <h3>Request received</h3>
+                <p>Thanks — we logged your details. We will reach out shortly to schedule your free water test. (Demo mode: check the browser console for the lead payload.)</p>
+                <p class="mt-1"><a href="index.html">Back to home</a></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="section-head">
+              <span class="eyebrow">What happens next</span>
+              <h2>Free test → clear rec → install</h2>
+              <p>No pressure theater. We measure, explain, and quote in the same band you saw online for city homes.</p>
+            </div>
+            <div class="steps" style="grid-template-columns:1fr">
+              <div class="step">
+                <h3>We confirm your slot</h3>
+                <p>Phone, text, or email — whichever you prefer — to schedule the in-home test.</p>
+              </div>
+              <div class="step">
+                <h3>On-site testing</h3>
+                <p>Chlorine/chloramine residual, hardness, and a look at your main line. Well homes get a broader symptom check.</p>
+              </div>
+              <div class="step">
+                <h3>Recommendation &amp; install</h3>
+                <p>Clear package pricing. Licensed plumber install when you are ready — typically within about a week of approval.</p>
+              </div>
+            </div>
+            <div class="honesty-box mt-2">
+              <h3>✦ City pricing reminder</h3>
+              <p>Most municipal homes: <strong>$2,700–$3,100 installed</strong> for whole-home catalytic carbon. Well packages quoted separately after testing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <span class="logo-mark" aria-hidden="true">H</span>
+            Harborline Water
+          </a>
+          <p>Whole-home filtration for Charleston and the Lowcountry. Catalytic carbon first. Honest about hardness. Licensed installs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="whole-home.html">Whole-Home Filtration</a>
+          <a href="reverse-osmosis.html">Reverse Osmosis</a>
+          <a href="softener.html">Water Softener</a>
+          <a href="well-water.html">Well Water</a>
+        </div>
+        <div class="footer-col">
+          <h4>Areas</h4>
+          <a href="charleston.html">Charleston</a>
+          <a href="mount-pleasant.html">Mount Pleasant</a>
+          <a href="summerville.html">Summerville</a>
+          <a href="johns-island.html">Johns Island</a>
+          <a href="west-ashley.html">West Ashley</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="book.html">Book free water test</a>
+          <a href="tel:+18435550148">(843) 555-0148</a>
+          <a href="mailto:hello@harborlinewater.com">hello@harborlinewater.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Harborline Water. Serving the Charleston Lowcountry.</span>
+        <span>Municipal water quality claims align with utility CCRs — we improve comfort, not invent crises.</span>
+      </div>
+    </div>
+  </footer>
+  <div class="sticky-cta" role="region" aria-label="Quick actions">
+    <a class="btn btn-call" href="tel:+18435550148">Call</a>
+    <a class="btn btn-primary" href="book.html">Book free water test</a>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
