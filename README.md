@@ -16,13 +16,11 @@ python3 -m http.server 8080
 
 ## Hosting (Vercel)
 
-Production is a Vercel static deploy. `vercel.json` enables `cleanUrls` so `/book` serves `book.html`.
+**Live production:** https://harborline-water.vercel.app
 
-```json
-{ "cleanUrls": true }
-```
+`vercel.json` enables `cleanUrls` so `/book` serves `book.html`, plus a root rewrite so `/` serves the homepage.
 
-Deploy:
+GitHub repo `jshawngarrison-ctrl/harborline-water` is connected; pushes to `main` deploy production.
 
 ```bash
 npx vercel --prod --yes
